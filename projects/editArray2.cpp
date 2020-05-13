@@ -1,9 +1,10 @@
 #include <iostream>
 using namespace std;
 
-void push_everywhere(int*& arr, int& size, int value, int element)
+template <typename typeArr, typeValue>
+void push_everywhere(typeArr *& arr, int& size, typeValue value, int element)
 {
-    int* newArray = new int[size + 1];
+    typeArr* newArray = new typeArr[size + 1];
     int j = 0;
 
     for (int i = 0; i <= size; i++)
@@ -20,9 +21,10 @@ void push_everywhere(int*& arr, int& size, int value, int element)
     arr = newArray;
 }
 
-void pop_everywhere(int*& arr, int& size, int element)
+template <typename T>
+void pop_everywhere(T *& arr, int& size, int element)
 {
-    int* newArray = new int[size - 1];
+    T* newArray = new T[size - 1];
     arr[element] = newArray[size];
     int j = 0;
 
@@ -62,5 +64,4 @@ int main()
 
     delete[] arr;
     return 0;
-
 }
