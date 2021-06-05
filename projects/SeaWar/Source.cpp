@@ -105,7 +105,6 @@ int main()
 			sea2[i].setTexture(seaSaved2[i].getTexture());
 		}
 		
-		//Условие выполняется если очередь первого игрока и идет расстановка кораблей
 		if (playerTurn == 0 && setShips == true)
 		{
 			strPlayerTurn = "Player 1, set the Ships!";
@@ -129,7 +128,6 @@ int main()
 				*counter1 = 1;
 			}
 		}
-		//Условие выполняется после расстановки
 		else if (playerTurn == 0)
 		{
 			strPlayerTurn = "Player 1 turn!";
@@ -161,7 +159,6 @@ int main()
 			}
 		}
 
-		//Условие выполняется если очередь второго игрока и идет расстановка кораблей
 		if (playerTurn == 1 && setShips == true)
 		{
 			strPlayerTurn = "Player 2, set the Ships!";
@@ -186,7 +183,7 @@ int main()
 				*counter2 = 1;
 			}
 		}
-		//Условие выполняется после расстановки
+		
 		else if (playerTurn == 1)
 		{
 			strPlayerTurn = "Player 2 turn!";
